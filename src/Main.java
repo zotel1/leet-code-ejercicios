@@ -25,14 +25,7 @@ public class Main {
         System.out.println("Antes del ordenamiento por longitud de nombre: ");
         System.out.println("Lista Personas: " + listaPersonas);
         System.out.println("Despues del ordenamiento: ");
-        listaPersonas.sort(new Comparator<Persona>() {
-            @Override
-            public int compare(Persona o1, Persona o2) {
-                int primero = o1.getNombre().length();
-                int segundo = o2.getNombre().length();
-                return Integer.compare(primero, segundo);
-            }
-        });
+        listaPersonas.sort(( o1, o2) -> Integer.compare(o1.getNombre().length(), o2.getNombre().length()));
         System.out.println("Lista Personas ordenadas por longitud de nombre: " + listaPersonas);
     }
 
