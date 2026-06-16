@@ -3,6 +3,7 @@ import course_lambdas.clase01.Persona;
 import course_lambdas.clase01.comparators.ComparadorPorLongitudDeNombre;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -24,7 +25,14 @@ public class Main {
         System.out.println("Antes del ordenamiento por longitud de nombre: ");
         System.out.println("Lista Personas: " + listaPersonas);
         System.out.println("Despues del ordenamiento: ");
-        listaPersonas.sort(new ComparadorPorLongitudDeNombre());
+        listaPersonas.sort(new Comparator<Persona>() {
+            @Override
+            public int compare(Persona o1, Persona o2) {
+                int primero = o1.getNombre().length();
+                int segundo = o2.getNombre().length();
+                return Integer.compare(primero, segundo);
+            }
+        });
         System.out.println("Lista Personas ordenadas por longitud de nombre: " + listaPersonas);
     }
 
