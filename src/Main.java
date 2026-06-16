@@ -1,35 +1,25 @@
 import course_lambdas.clase01.FakerUtils;
 import course_lambdas.clase01.Persona;
-import course_lambdas.clase01.comparators.ComparadorPorLongitudDeNombre;
+import course_lambdas.clase02.Ventana;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
+        new Ventana("Aprendiendo lambdas!");
 
-       // System.out.printf("Hello and welcome!");
-
-       // for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-         //   System.out.println("i = " + i);
-        //}
-
+        /** Clase 01
         List<Persona> listaPersonas = generarPersonas(100);
         System.out.println("Antes del ordenamiento por longitud de nombre: ");
         System.out.println("Lista Personas: " + listaPersonas);
         System.out.println("Despues del ordenamiento: ");
         listaPersonas.sort(( o1, o2) -> Integer.compare(o1.getNombre().length(), o2.getNombre().length()));
-        System.out.println("Lista Personas ordenadas por longitud de nombre: " + listaPersonas);
+        System.out.println("Lista Personas ordenadas por longitud de nombre: " + listaPersonas); **/
     }
 
-    private static List<Persona> generarPersonas(int n) {
+    /**Clase01
+     * private static List<Persona> generarPersonas(int n) {
         List<Persona> personas = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
@@ -38,5 +28,5 @@ public class Main {
             personas.add(new Persona(nombre, apellido));
         }
         return personas;
-    }
+    } **/
 }
